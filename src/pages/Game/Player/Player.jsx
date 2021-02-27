@@ -10,11 +10,11 @@ export const Player = (props) => (
     <TextFieldInput
       disabled={false}
       helperText=""
-      label="Gamer name"
+      label={props.gamerName}
       placeholder="Enter gamer name"
       size="small"
       variant="outlined"
-      onChange={(e) => props.onChange(e)}
+      onChange={(e) => props.onChangeName(e)}
     />
   </div>
 );

@@ -4,6 +4,7 @@ import { Home } from './pages/Home/Home';
 import { Game } from './pages/Game/Game';
 import { About } from './pages/About/About';
 import { Header } from './components/Header/Header';
+import { GameWithBot } from './components/GameWithBot/GameWithBot';
 import './App.scss';
 
 export const App = () => (
@@ -18,6 +19,7 @@ export const App = () => (
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
           <Route path="/game" component={Game} />
+          <Route path="/playWithBot" component={GameWithBot} />
         </Switch>
 
       </main>
