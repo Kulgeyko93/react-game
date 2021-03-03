@@ -7,8 +7,8 @@ export const Home = () => (
     <NavLink to="/game">
       <div className="game__link">Game</div>
     </NavLink>
-    <NavLink to="/settings">
-      <div className="settings__link">Settings</div>
+    <NavLink to="/about">
+      <div className="about__link">About</div>
     </NavLink>
   </div>
 );

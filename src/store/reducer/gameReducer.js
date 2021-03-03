@@ -1,4 +1,4 @@
-import { RESULTS_FIRST_USER, RESULTS_SECOND_USER, STATS_GAME, BOT_ANSWER } from '../types';
+import { RESULTS_FIRST_USER, STATS_GAME, BOT_ANSWER } from '../types';
 import { defaultGame } from '../defaultState';
 
 export const gameReducer = (state = defaultGame, action) => {
@@ -8,12 +8,6 @@ export const gameReducer = (state = defaultGame, action) => {
       return {
         ...state,
         resultFirstUser: payload,
-      };
-    }
-    case RESULTS_SECOND_USER: {
-      return {
-        ...state,
-        resultSecondUser: payload,
       };
     }
     case STATS_GAME: {

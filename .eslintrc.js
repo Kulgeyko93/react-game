@@ -18,6 +18,10 @@ module.exports = {
     'react',
   ],
   rules: {
+    'no-nested-ternary': 0,
+    'no-shadow': 0,
+    'no-undef': 0,
+    'no-spaced-func': 0,
     'eslint-plugin-import': 0,
     'import/prefer-default-export': 0,
     'react/destructuring-assignment': 0,
@@ -25,9 +29,4 @@ module.exports = {
     'eslint-disable no-spaced-func': 0,
     'linebreak-style': 0,
   },
-
-  // 'import/no-unresolved': [
-  //   2,
-  //   { caseSensitive: false },
-  // ],
 };

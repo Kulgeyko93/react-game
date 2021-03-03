@@ -67,4 +67,7 @@ module.exports = {
     hot: true,
     port: 8000,
   },
+  performance: {
+    hints: false,
+  },
 };
