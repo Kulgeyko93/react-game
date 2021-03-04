@@ -1,0 +1,52 @@
+.play {
+  width: 80vw;
+  height: 100%;
+
+  &__stats {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    border: 3px solid grey;
+  }
+  &__results {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__firstUser, &__bot {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 10px solid grey;
+      background-color: white;
+      border-radius: 100%;
+      width: 15vw;
+      height: 15vw;
+      margin: 20px 0;
+      &:hover {
+        transform: scale(1.2);
+      }
+      img {
+        color: black;
+        width: 75%;
+        height: 75%;
+      }
+    }
+
+  }
+  &__results__timer {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .home__btn {
+      margin-right: 50px;
+    }
+  }
+}
