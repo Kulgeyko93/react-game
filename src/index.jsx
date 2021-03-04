@@ -6,6 +6,16 @@ import { App } from './App';
 import { appStore } from './store/appStore';
 import reportWebVitals from './reportWebVitals';
 
+localStorage.setItem('settings_react_game',
+  JSON.stringify({
+    firstUserName: 'Gamer 1',
+    isMusiсOn: 0,
+    isSoundOn: 0,
+    resultFirstUser: 'Rock',
+    botAnswer: 'Rock',
+    stats: 0,
+  }));
+
 ReactDOM.render(
   // eslint-disable-next-line react/jsx-filename-extension
   <React.StrictMode>

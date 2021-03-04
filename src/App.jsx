@@ -6,33 +6,27 @@ import { About } from './pages/About/About';
 import { Footer } from './components/Footer/Footer';
 import { Header } from './components/Header/Header';
 import { GameWithBot } from './components/GameWithBot/GameWithBot';
-import { setDefSettingsToStorage } from './utils/setDefSettingsToStorage';
 
 import './App.scss';
 
-export const App = () => {
-  if (localStorage.getItem('settings') === null) {
-    setDefSettingsToStorage();
-  }
-  return (
-    <BrowserRouter>
-      <div className="App">
-        <header className="header">
-          <Header />
-        </header>
-        <main className="main">
+export const App = () => (
+  <BrowserRouter>
+    <div className="App">
+      <header className="header">
+        <Header />
+      </header>
+      <main className="main">
 
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/game" component={Game} />
-            <Route path="/playWithBot" component={GameWithBot} />
-            <Route path="/about" component={About} />
-          </Switch>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/game" component={Game} />
+          <Route path="/playWithBot" component={GameWithBot} />
+          <Route path="/about" component={About} />
+        </Switch>
 
-        </main>
-        <Footer />
-      </div>
-    </BrowserRouter>
-  );
-};
+      </main>
+      <Footer />
+    </div>
+  </BrowserRouter>
+);

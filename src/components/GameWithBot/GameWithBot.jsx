@@ -5,6 +5,7 @@ import { Button } from '@material-ui/core';
 import { compareResults } from '../../utils/compareResults';
 import { setStatsGame } from '../../store/action/gameAction';
 import { setParamToLocalStorage } from '../../utils/setParamToLocalStorage';
+import { Sound } from '../Sound/Sound';
 import paper from '../../assets/img/icon-paper.svg';
 import rock from '../../assets/img/icon-rock.svg';
 import scissors from '../../assets/img/icon-scissors.svg';
@@ -19,6 +20,8 @@ export const GameWithBot = () => {
   const [time, setTime] = useState(3);
 
   const setStats = (result) => dispatch(setStatsGame(result));
+
+  const [playSound, setPlaySound] = useState(false);
 
   const setWinInStats = (result) => {
     if (result === 'Bot winner') {
@@ -88,24 +91,28 @@ export const GameWithBot = () => {
           : (
             <div>
               <Button
-                variant="outlined"
-                color="secondary"
+                className="home__btn"
+                variant="contained"
+                color="primary"
+                onClick={() => setPlaySound(true)}
               >
-                <NavLink to="/" exact>
+                <NavLink to="/">
                   Home
                 </NavLink>
               </Button>
               <Button
-                variant="outlined"
-                color="secondary"
+                variant="contained"
+                color="primary"
+                onClick={() => setPlaySound(true)}
               >
-                <NavLink to="/game" exact>
+                <NavLink to="/game">
                   Play again
                 </NavLink>
               </Button>
             </div>
           )}
       </div>
+      <Sound onPlay={setPlaySound} play={playSound} />
     </div>
   );
 };
